@@ -11879,9 +11879,9 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Step-2-:-Identification-of-Telluric-Contamination">Step 2 : Identification of Telluric Contamination<a class="anchor-link" href="#Step-2-:-Identification-of-Telluric-Contamination">&#182;</a></h2><p><strong>terraspec</strong></p>
 <ul>
-<li>Modelling for identifying, and flagging of possibly contaminated wavelengths.
-<img src="TelluricMaskTerraspec.png"></li>
+<li>Modelling for identifying, and flagging of possibly contaminated wavelengths.</li>
 </ul>
+<p><img src="TelluricMaskTerraspec.png"></p>
 
 </div>
 </div>
@@ -11927,10 +11927,12 @@ a.anchor-link {
 <li>Finite order splines is computationally fast, but smooths the spectrum</li>
 <li>Band Limited Interpolation is needed.</li>
 </ul>
+<p><img src="InterpolationErrorAfter30000.png">
+After 30000 random inteprolations.</p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11944,10 +11946,11 @@ a.anchor-link {
 </ul>
 </li>
 </ul>
+<p><img src="FFT_of_OverSampled.png"></p>
 
 </div>
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11956,15 +11959,15 @@ a.anchor-link {
 <p>Windowing of Sinc function needed.</p>
 <ul>
 <li>Choice of Window function based on flexibility due to over sampling.<ul>
-<li>Kaiser window  : Easy to parametrise &amp; maximum energy concentration in the main lobe.
-![Kaiser Window] (<em>Picture Comes Here</em>)</li>
+<li>Kaiser window  : Easy to parametrise &amp; maximum energy concentration in the main lobe.</li>
 </ul>
 </li>
 </ul>
+<p><img src="Kaiser13SincFilter4BLInterpolation.png"></p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11972,12 +11975,13 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Filter-Delay">Filter Delay<a class="anchor-link" href="#Filter-Delay">&#182;</a></h4><ul>
 <li>Asymmetric FIR, due to non linear wavelength calibration of pixel </li>
-<li>Quantifiable shift</li>
+<li>Quantifiable shift =&gt; 0.54 cm/sec delay per interpolation</li>
 </ul>
+<p><img src="FilterDelayinSincInterpolaton_RedLagBue.png"></p>
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12011,7 +12015,11 @@ a.anchor-link {
 <li>Stellar Activity</li>
 <li>Solar Contamination</li>
 </ul>
-<p>Eg: Sigma Clipping</p>
+<p>Methods being explored:</p>
+<ul>
+<li>Identifying wavelength regions affected by stellar activity by comparing multi epoch HARPS specta.</li>
+<li>Using template to estimate RV information content per pixel and do optimal weighing.</li>
+</ul>
 
 </div>
 </div>
@@ -12029,29 +12037,6 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Results-so-far...">Results so far...<a class="anchor-link" href="#Results-so-far...">&#182;</a></h2><p>Comparison of improved results with HARPS data</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div></section></section>
 </div>
 </div>
